@@ -5,11 +5,15 @@ const switchAction = { type:'SWITCH' };
 
 class LightComponent extends Component {
   render() {
-    const { light, dispatch } = this.props;
+  const { light, dispatch } = this.props;
     return (
       <div>
         <p>{light}</p>
-        <button onClick={()=> dispatch(switchAction)}>Switch</button>
+        <button 
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" 
+        onClick={()=> dispatch(switchAction)}>
+        Switch
+        </button>
       </div>
     );
   }
